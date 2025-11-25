@@ -234,7 +234,7 @@ class TileSelectorApp:
         joined_lines = ",\n".join(lines)
         
         # 組合最終字串
-        csharp_code = f"int[{height},{width}] item = {{\n{joined_lines}\n}};"
+        csharp_code = f"private int[,] item = {{\n{joined_lines}\n}};"
         
         try:
             with open(save_path, 'w', encoding='utf-8') as f:
